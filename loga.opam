@@ -10,13 +10,10 @@ dev-repo: "https://github.com/yutopp/loga.git"
 
 available: [ocaml-version >= "4.03.0"]
 
-build: [[ "omake" "PREFIX=%{prefix}%" ]]
-install: [[ "omake" "install" "PREFIX=%{prefix}%" ]]
-remove: [[ "omake" "uninstall" ]]
+build: [[ "jbuilder" "build" "-p" name "-j" jobs ]]
 
 depends: [
-  "ocaml-compiler-libs" {>= "v0.9.0"}
-  "omake"               {build}
-  "ocamlfind"           {build}
-  "ounit"               {build}
+  "ocaml-compiler-libs"     {>= "v0.9.0"}
+  "jbuilder"                {build & >= "1.0+beta8"}
+  "ocaml-migrate-parsetree" {>= "0.4"}
 ]
