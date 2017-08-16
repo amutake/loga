@@ -1,0 +1,7 @@
+(library
+ ((name loga)
+  (public_name loga)
+  (kind ppx_rewriter)
+  (libraries
+   (unix
+    ocaml-migrate-parsetree))))

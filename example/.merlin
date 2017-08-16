@@ -1,0 +1,9 @@
+B ../_build/default/example
+B ../_build/default/src
+FLG -ppx "../_build/.ppx/default/loga/ppx.exe --as-ppx"
+FLG -w -40
+PKG compiler-libs
+PKG compiler-libs.common
+PKG ocaml-migrate-parsetree
+PKG unix
+S .

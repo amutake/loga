@@ -1,0 +1,4 @@
+(executables
+ ((names (log_example))
+  (libraries (loga))
+  (preprocess (pps (loga)))))
